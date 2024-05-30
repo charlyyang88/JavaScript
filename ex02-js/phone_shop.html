@@ -41,6 +41,13 @@
             console.log("이벤트명:", event.name);
             console.log("이벤트 발생 객체:", event.target);
         }
+        document.getElementById("product-list").onclick = (event) => {
+            alert("서브이미지 클릭!");
+            console.log(event);
+            console.log("이벤트명:", event.name);
+            console.log("이벤트 발생 객체:", event.target);
+        }
+
         let Products = document
             .getElementsByClassName("sub-image");
         for (let i = 0; i < Products.length; i++) {
@@ -64,7 +71,7 @@
     </script>
     <style>
         /* 요소의 마우스 포인터를 손가락 모양으로 변경 */
-        div {
+        #main-image, ul {
             cursor: pointer;
             /* 직접 커서 이미지를 만들고, 이를 사용하여 커서의 모양과 색상을 변경 - 예시 */
             /* cursor: url('images/cursor.png'), pointer; */ 
